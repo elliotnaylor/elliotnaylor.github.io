@@ -2,23 +2,23 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Elliot Naylor
+Elliot Naylor
+Data Scientist
 
 Show Contacts
 
 Email
-richard@example.com
+elliotnaylor96@gmail.com
 
 Phone
-+1 (213) 352-2795
+000
 
 Birthday
-June 23, 1982
+July 3, 1996
 
 Location
-Sacramento, California, USA
+Guildford, Surrey, UK
 
 # navbar
 
