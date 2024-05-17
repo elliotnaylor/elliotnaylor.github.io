@@ -350,7 +350,7 @@ main {
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
-  padding: 3px 12px;
+  padding: 8px 12px;
   border-radius: 8px;
 }
 
@@ -1343,7 +1343,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info-content .name { margin-bottom: 15px; }
 
-  .info-content .title { padding: 5px 18px; }
+  .info-content .title { padding: 8px 18px; }
 
   .info_more-btn {
     top: -30px;
