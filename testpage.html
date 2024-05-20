@@ -158,7 +158,7 @@
             </li>
   
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
+              <button class="navbar-link" onclick="window.location.href='https://elliotnaylor.gihub.io';" data-nav-link data-nav-link>Resume</button>
             </li>
   
             <li class="navbar-item">
@@ -183,55 +183,7 @@
           <h2 class="h2 article-title">Mesuring Dimensions With Webcam</h2>
         </header>
         <section class="about-text">
-          <p>
-            This project was realized in my first year engineering design class. The mandate from the client was to
-            create a system/software to quickly identify bearings in different wear condition. Making it easier for
-            his employes and getting the customers out the door faster. My group came up with a vision system with
-            an Excel database of the top 300 most common bearings.
-          </p>
-          <p>
-            The physical design is quite simple. All the green parts have been designed in Solidworks and 3D printed.
-            The upright is adjusteble to allow bigger bearings to fit in the field of view of the webcam.
-          </p>
-          <div class="container">
-            <div class="column">
-              <img src="./assets/images/GBS_support_bearing.jpg" id="rcimage" alt="GBS Support Upright" width="400"
-                height="300" style="max-width:95%;border:2px solid #F1D16C;">
-            </div>
-            <div class="column">
-              <img src="./assets/images/GBS_Exploded_View.png" id="rcimage" alt="GBS Exploded View" width="400"
-                height="300" style="max-width:95%;border:2px solid #F1D16C;">
-            </div>
-          </div>
-          <p>
-            The webcam has an integrated ring light, which helps greatly the Python AI vision system to identify the
-            edges of the bearing properly. I coded the entire project in Python for the backend and used Anvil (which
-            also uses Python) to create a simple and fast interface. <a href="https://anvil.works/">Check out Anvil</a>
-          </p>
-          <p>
-          <div class="column">
-            <img src="./assets/images/GBS_CamView.png" id="rcimage" alt="GBS Cam" width="400" height="300"
-              style="max-width:95%;border:2px solid #F1D16C;">
-          </div>
-          </p>
-          <p>
-            The programme now takes the image captured and puts it through a couple manipilations to eliminate shadows
-            and only focus on the quater and the bearing. The quarter is used as a reference point since the support is
-            height adjustable, the size of one pixel is not always the same ratio in mm. Because we know the physical
-            dimension of the quarter, a simple cross multiplication can give the dimension in mm of the inside and
-            outside ring. With many iterations I was able to get the accuracy down to about 1 mm which was beyond the
-            customers expectationt. My programme was tied for first at the design fair for the accuracy of the vision
-            system. The client awared us with a 4.5/5 mark which was just behind the first place team. Overall the grade
-            obtained on this project was A (90%).
-          <div class="sizing">
-            <img src="./assets/images/GBS_Interface.png" id="rcimage" alt="GBS Interface"
-              style="max-width:95%;border:2px solid #F1D16C;">
-          </div>
-          </p>
-          <p>
-            <a href="https://makerepo.com/300186999/936.identificateur-de-roulement-fd10"> You can check out all the
-              files and more info here.</a>
-          </p>
+            
         </section>
       </article>
     </div>
