@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img  src="../assets/images/avatar.jpg" alt="Elliot Naylor" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Elliot Naylor">Elliot Naylor</h1>
+          <p class="title">Games Developer</p>
+          <p class="title">Data Scientist</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:elliotnaylor96@gmail.com" class="contact-link">elliotnaylor96@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1996-07-03">3rd July 1996</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Guildford, Surrey, UK</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/elliotnaylor" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/elliot-naylor/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/ellnaynay/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+        <!--
+          - #NAVBAR
+        -->
+  
+        <nav class="navbar">
+  
+          <ul class="navbar-list">
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href='https://elliotnaylor.github.io/';" data-nav-link>About</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href='https://elliotnaylor.github.io/';" data-nav-link>Resume</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link active" onclick="window.location.href='https://elliotnaylor.github.io/';" data-nav-link>Portfolio</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href='https://elliotnaylor.github.io/';" data-nav-link>Blog</button>
+            </li>
+  
+            <li class="navbar-item">
+              <button class="navbar-link" onclick="window.location.href='https://elliotnaylor.github.io/';" data-nav-link>Contact</button>
+            </li>
+  
+          </ul>
+  
+        </nav>
+  
+      <!-------------------------------------------------------------------- Article Text -------------------------------------------------------------------->
+      <article class="about  active" data-page="GeneralBearingService">
+        <header>
+          <h2 class="h2 article-title">Spot Detection</h2>
+        </header>
+        <section class="about-text">
+          <p>This was developed for a company looking to detect unhealthy skin using computer vision algorithms. This was one of the decided upon techniques, which can be used to detect pimples and wrinkles. No machine learning techniques are used for this technique because of a lack of available data at the time of creation.</p>
+          <h3 id="discussion">Discussion</h3>
+          <p>This is an algorithm designed for the detection of acne using techniques including thresholding, contours, and moments. The algorithm is tested using the AGES dataset and has an accuracy of 76.17%.</p>
+          <p>Like most computer vision processes, you start with a gaussian blur to remove smaller areas that are not of interest to the algorihthm. The image is then converted to a grayscale and a blob detection algorithm. Anything below a certain size is lacking detail for accurate detection, so they are removed.</p>
+          <pre><code><span class="hljs-comment">//Cycles through different thresholds of the gray scaled image and locates blobs</span>
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; <span class="hljs-number">25</span>; i++) { <span class="hljs-comment">//Cycles from 0 to 250</span>
+            <span class="hljs-comment">//Saves gray scale</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> <span class="hljs-keyword">index</span> = <span class="hljs-number">0</span>; <span class="hljs-keyword">index</span> &lt; frame.cols * frame.rows; <span class="hljs-keyword">index</span>++) {
+              <span class="hljs-keyword">if</span> (gray.ptr&lt;unsigned <span class="hljs-keyword">char</span>&gt;()[<span class="hljs-keyword">index</span>] &gt; i * <span class="hljs-number">10</span>) thresh.ptr&lt;unsigned <span class="hljs-keyword">char</span>&gt;()[<span class="hljs-keyword">index</span>] = <span class="hljs-number">250</span>;
+            }
+          }
+          </code></pre><p>A number of thresholds are applied to the grey-scalled image in intervals of 20, each is saved to a seperate image. Contours are found on each image and anything with a circular shape is saved. This is followed by measuring the colour of the area and detecting whether it is close to the colour red.</p>
+          <pre><code><span class="hljs-comment">//Locates contours, this includes blobs that could be freckles/spots</span>
+          findContours(thresh, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+          
+          <span class="hljs-built_in">vector</span>&lt;Moments&gt; mu(contours.size());    <span class="hljs-comment">//Area of shape</span>
+          <span class="hljs-built_in">vector</span>&lt;Point2f&gt; mc(contours.size());    <span class="hljs-comment">//Center points</span>
+          
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; contours.size(); j++) {
+          
+            <span class="hljs-comment">//Get center point of the contour and using "moments"</span>
+            mu[j] = moments(contours[j], <span class="hljs-literal">true</span>);
+            mc[j] = Point2f(mu[j].m10 / mu[j].m00, mu[j].m01 / mu[j].m00);
+          </code></pre><p>The images below show the original image, contouring and the removal of areas until the final two pimples are located.</p>
+          <p><img src="https://user-images.githubusercontent.com/22525909/229362388-34847524-a697-4dae-b914-29342453a661.png" alt="image">  <img src="https://user-images.githubusercontent.com/22525909/229362400-0945319f-e8e9-4722-ad85-7c02d4095b07.png" alt="image">  <img src="https://user-images.githubusercontent.com/22525909/229362482-d235364b-c9c1-4319-9209-45306c1b9d04.png" alt="image">  <img src="https://user-images.githubusercontent.com/22525909/229362413-25060d4f-3fe1-45ed-bf64-00aa6be7c4ba.png" alt="image"></p>
+          
+        </section>
+      </article>
+    </div>
+  </main>
+  <!-------------------------------------------------------------------- Custom js Link -------------------------------------------------------------------->
+  <script src="./assets/js/script.js"></script>
+  <!-------------------------------------------------------------------- ionicon link -------------------------------------------------------------------->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
